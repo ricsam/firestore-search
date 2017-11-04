@@ -10,15 +10,23 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import Search from 'containers/Search';
+import Insert from 'containers/Insert';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  padding: 1rem;
+`;
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <Wrapper>
+        <h1>Welcome</h1>
+        <Search />
+        <Insert />
+      </Wrapper>
+
     );
   }
 }
